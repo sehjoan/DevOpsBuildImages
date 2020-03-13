@@ -25,9 +25,11 @@
                 "version": "2019.0.20190214"
             
         },
-        "customize": [
+        "customize": [		
 			{
 				"type": "powershell",
+                "name": "CreateImageFolder",
+                "runElevated": true,				
 				"inline":[
 					"New-Item -Path <image_folder> -ItemType Directory -Force",
 					"Write-Output <commit_id> > <commit_file>",
