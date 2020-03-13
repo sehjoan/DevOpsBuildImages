@@ -25,12 +25,22 @@
                 "version": "2019.0.20190214"
             
         },
-        "customize": [		
+        "customize": [	
+            {
+                "type": "PowerShell",
+                "name": "settingUpMgmtAgtPath",
+                "runElevated": false,
+                "inline": [
+                    "mkdir c:\\buildActions",
+                    "echo Azure-Image-Builder-Was-Here  > c:\\buildActions\\buildActionsOutput.txt"
+                ]
+            },		
 			{
 				"type": "powershell",
                 "name": "CreateImageFolder",
                 "runElevated": true,				
-				"inline":[
+				"inline": [
+					"echo HelloWorld!" 
 					"New-Item -Path <image_folder> -ItemType Directory -Force",
 					"Write-Output <commit_id> > <commit_file>",
 					"Write-Host (Get-Content -Path <commit_file>)"
