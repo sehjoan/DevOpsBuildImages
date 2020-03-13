@@ -52,29 +52,23 @@
                     "echo Azure-Image-Builder-Was-Here  > c:\\buildActions\\buildActionsOutput.txt"
                 ]
              },
-		{
-			"type": "PowerShell",
-			"name": "createInstallUser",
-                        "runElevated": true,
-			"inline": [
-				"net user <install_user> <install_password> /add /passwordchg:no /passwordreq:yes /active:yes /Y" ,
-				"net localgroup Administrators <install_user> /add",
-				"winrm set winrm/config/service/auth @{Basic=\"true\"}",
-				"winrm get winrm/config/service/auth"
-			]
-		},
-		{
-			"type": "powershell",
-			"name": "InitializeVM",
-                        "runElevated": true,
-			"environment_vars": [
-				"ImageVersion=<image_version>"
-			],
-			"scripts":[
-				"<template_dir>/scripts/Installers/Windows2019/Initialize-VM.ps1"
-			]
-		}
-            
+             {
+             	"type": "PowerShell",
+             	"name": "createInstallUser",
+                "runElevated": true,
+             	"inline": [
+                    "net user <install_user> <install_password> /add /passwordchg:no /passwordreq:yes /active:yes /Y" ,
+                    "net localgroup Administrators <install_user> /add",
+                    "winrm set winrm/config/service/auth @{Basic=\"true\"}",
+                    "winrm get winrm/config/service/auth"
+             	]
+             },
+             {
+             	"type": "PowerShell",
+             	"name": "InitializeVM",
+                "runElevated": true,
+             	"scriptUri": "<template_dir>/scripts/Installers/Windows2019/Initialize-VM.ps1"
+             }
         ],
         "distribute": 
             [
