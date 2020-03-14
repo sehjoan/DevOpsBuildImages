@@ -61,7 +61,7 @@
             },
             {
                 "type": "WindowsRestart",
-                "restart_timeout": "10m"
+                "restartTimeout": "5m"
             },
             {
                 "type": "PowerShell",
