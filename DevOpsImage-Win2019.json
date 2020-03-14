@@ -20,15 +20,15 @@
       "version": "2019.0.20190214"
     },
     "customize": [
-      {
-        "type": "PowerShell",
-        "name": "settingUpMgmtAgtPath2",
-        "runElevated": false,
-        "inline": [
-          "mkdir c:\\buildActions",
-          "echo Azure-Image-Builder-Was-Here  > c:\\buildActions\\buildActionsOutput.txt"
-        ]
-      },      
+            {
+                "type": "PowerShell",
+                "name": "settingUpMgmtAgtPath",
+                "runElevated": false,
+                "inline": [
+                    "mkdir c:\\buildActions",
+                    "echo Azure-Image-Builder-Was-Here  > c:\\buildActions\\buildActionsOutput.txt"
+                ]
+                },
       {
         "type": "PowerShell",
         "name": "CreateImageFolder",
