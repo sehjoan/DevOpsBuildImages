@@ -28,7 +28,7 @@
                     "mkdir c:\\buildActions",
                     "echo Azure-Image-Builder-Was-Here  > c:\\buildActions\\buildActionsOutput.txt"
                 ]
-                },
+            },
             {
                 "type": "PowerShell",
                 "name": "CreateImageFolder",
@@ -54,12 +54,15 @@
             {
                 "type": "PowerShell",
                 "runElevated": true,
-                "environment_vars": [
+                "environmentVars": [
                     "ImageVersion=<image_version>"
                 ],
                 "scriptUri": "<template_dir>/scripts/Installers/Windows2019/Initialize-VM.ps1"
             },
-
+            {
+                "type": "WindowsRestart",
+                "restartTimeout": "5m"
+            },
             {
                 "type": "PowerShell",
                 "runElevated": true,
