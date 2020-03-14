@@ -729,21 +729,9 @@
         "scriptUri": "<template_dir>/scripts/Installers/Windows2019/Run-Antivirus.ps1"
       },
       {
-        "type": "PowerShell",
-        "name": "CreateBuildPath",
-        "runElevated": false,
-        "scriptUri": "https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/testPsScript.ps1"
-      },
-      {
         "type": "WindowsRestart",
         "restartCheckCommand": "echo Azure-Image-Builder-Restarted-the-VM  > c:\\buildArtifacts\\azureImageBuilderRestart.txt",
         "restartTimeout": "5m"
-      },
-      {
-        "type": "File",
-        "name": "downloadBuildArtifacts",
-        "sourceUri": "https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/quickquickstarts/exampleArtifacts/buildArtifacts/index.html",
-        "destination": "c:\\buildArtifacts\\index.html"
       },
       {
         "type": "PowerShell",
