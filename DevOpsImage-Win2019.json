@@ -39,10 +39,10 @@
                 ]
             },
             {
-                "type": "file",
+                "type": "File",
                 "name": "CopyImageFolder",
                 "runElevated": true,
-                "source": "<template_dir>/scripts/ImageHelpers",
+                "sourceUri": "<template_dir>/scripts/ImageHelpers",
                 "destination": "C:\\Program Files\\WindowsPowerShell\\Modules\\"
             },
             {
