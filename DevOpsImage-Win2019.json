@@ -59,10 +59,7 @@
                 ],
                 "scriptUri": "<template_dir>/scripts/Installers/Windows2019/Initialize-VM.ps1"
             },
-            {
-                "type": "WindowsRestart",
-                "restartTimeout": "5m"
-            },
+
             {
                 "type": "PowerShell",
                 "runElevated": true,
