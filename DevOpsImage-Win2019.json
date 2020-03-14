@@ -60,7 +60,7 @@
                 "scriptUri": "<template_dir>/scripts/Installers/Windows2019/Initialize-VM.ps1"
             },
             {
-                "type": "windows-restart",
+                "type": "WindowsRestart",
                 "restart_timeout": "10m"
             },
             {
@@ -69,7 +69,7 @@
                 "scriptUri": "<template_dir>/scripts/Installers/Install-ContainersFeature.ps1"
             },
             {
-                "type": "windows-restart",
+                "type": "WindowsRestart",
                 "restart_timeout": "10m"
             },
             {
