@@ -39,10 +39,22 @@
                 ]
             },
             {
-                "type": "File",
-                "name": "downloadBuildArtifacts",
-                "sourceUri": "https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/quickquickstarts/exampleArtifacts/buildArtifacts/index.html",
-                "destination": "c:\\buildArtifacts\\index.html"
+                "type": "PowerShell",
+                "name": "SetEnvV",
+                "runElevated": false,
+                "inline": [
+                    "setx ImageVersion <image_version> /m",
+                    "setx ImageOS <image_os> /m",
+                    "setx IMAGE_VERSION <image_version> /m",
+                    "setx IMAGEDATA_FILE <imagedata_file> /m",
+                    "setx GITHUB_FEED_TOKEN <github_feed_token> /m",
+                    "setx ROOT_FOLDER <root_folder> /m",
+                    "setx GO_VERSIONS=1.10.8,1.11.12,1.12.7,1.13 /m",
+                    "setx GO_DEFAULT=1.12.7 /m",
+                    "setx BOOST_VERSIONS=1.69.0,1.72.0 /m",
+                    "setx BOOST_DEFAULT=1.72.0 /m",
+                    "setx ROOT_FOLDER=<root_folder> /m"
+                ]
             },
             {
                 "type": "File",
@@ -54,9 +66,6 @@
             {
                 "type": "PowerShell",
                 "runElevated": true,
-                "environmentVars": [
-                    "ImageVersion=<image_version>"
-                ],
                 "scriptUri": "<template_dir>/scripts/Installers/Windows2019/Initialize-VM.ps1"
             },
             {
@@ -83,10 +92,6 @@
       {
         "type": "PowerShell",
         "runElevated": true,
-        "environment_vars": [
-          "IMAGE_VERSION=<image_version>",
-          "IMAGEDATA_FILE=<imagedata_file>"
-        ],
         "scriptUri": "<template_dir>/scripts/Installers/Update-ImageData.ps1"
       },
       {
@@ -121,10 +126,6 @@
       {
         "type": "PowerShell",
         "runElevated": true,
-        "valid_exit_codes": [
-          0,
-          3010
-        ],
         "scriptUri": "<template_dir>/scripts/Installers/Windows2019/Install-VS2019.ps1"
       },
       {
@@ -140,10 +141,6 @@
       {
         "type": "PowerShell",
         "runElevated": true,
-        "valid_exit_codes": [
-          0,
-          3010
-        ],
         "scriptUri": "<template_dir>/scripts/Installers/Install-NET48.ps1"
       },
       {
@@ -224,10 +221,6 @@
       {
         "type": "PowerShell",
         "runElevated": true,
-        "environment_vars": [
-          "GITHUB_FEED_TOKEN=<github_feed_token>",
-          "ROOT_FOLDER=<root_folder>"
-        ],
         "scriptUri": "<template_dir>/scripts/Installers/Download-ToolCache.ps1"
       },
       {
@@ -248,10 +241,6 @@
       {
         "type": "PowerShell",
         "runElevated": true,
-        "environment_vars": [
-          "GO_VERSIONS=1.10.8,1.11.12,1.12.7,1.13",
-          "GO_DEFAULT=1.12.7"
-        ],
         "scriptUri": "<template_dir>/scripts/Installers/Install-Go.ps1"
       },
       {
@@ -404,10 +393,6 @@
       {
         "type": "PowerShell",
         "runElevated": true,
-        "environment_vars": [
-          "BOOST_VERSIONS=1.69.0,1.72.0",
-          "BOOST_DEFAULT=1.72.0"
-        ],
         "scriptUri": "<template_dir>/scripts/Installers/Install-Boost.ps1"
       },
       {
@@ -497,9 +482,7 @@
       {
         "type": "PowerShell",
         "runElevated": true,
-        "environment_vars": [
-          "ROOT_FOLDER=<root_folder>"
-        ],
+
         "scriptUri": "<template_dir>/scripts/Installers/Validate-ToolCache.ps1"
       },
       {
@@ -520,19 +503,12 @@
       {
         "type": "PowerShell",
         "runElevated": true,
-        "environment_vars": [
-          "GO_VERSIONS=1.10.8,1.11.12,1.12.7,1.13",
-          "GO_DEFAULT=1.12.7"
-        ],
         "scriptUri": "<template_dir>/scripts/Installers/Validate-Go.ps1"
       },
       {
         "type": "PowerShell",
         "runElevated": true,
-        "environment_vars": [
-          "BOOST_VERSIONS=1.69.0,1.72.0",
-          "BOOST_DEFAULT=1.72.0"
-        ],
+
         "scriptUri": "<template_dir>/scripts/Installers/Validate-Boost.ps1"
       },
       {
