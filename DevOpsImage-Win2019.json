@@ -216,8 +216,9 @@
         "scriptUri": "<template_dir>/scripts/Installers/Install-Packer.ps1"
       },
       {
-        "type": "file",
-        "source": "<template_dir>/toolcache-2019.json",
+        "type": "File",
+        "name": "Step 34"
+        "sourceUri": "<template_dir>/toolcache-2019.json",
         "destination": "<root_folder>/toolcache.json"
       },
       {
@@ -712,12 +713,6 @@
         "type": "PowerShell",
         "runElevated": true,
         "scriptUri": "<template_dir>/scripts/Installers/Validate-Bazel.ps1"
-      },
-      {
-        "type": "file",
-        "source": "C:\\InstalledSoftware.md",
-        "destination": "<template_dir>/Windows2019-Readme.md",
-        "direction": "download"
       },
       {
         "type": "PowerShell",
