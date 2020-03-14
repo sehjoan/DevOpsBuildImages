@@ -67,7 +67,7 @@
              	"type": "PowerShell",
              	"name": "InitializeVM",
                 "runElevated": true,
-             	"scriptUri": "<template_dir>/scripts/Installers/Windows2019/Initialize-VM.ps1"
+             	"scriptUri": "<templatedir>/scripts/Installers/Windows2019/Initialize-VM.ps1"
              }
         ],
         "distribute": 
