@@ -21,7 +21,7 @@
     },
     "customize": [
             {
-                "type": "PowerShell",
+                "type": "PowerShelll",
                 "name": "settingUpMgmtAgtPath",
                 "runElevated": false,
                 "inline": [
