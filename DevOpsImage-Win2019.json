@@ -70,7 +70,7 @@
             },
             {
                 "type": "WindowsRestart",
-                "restart_timeout": "10m"
+                "restartTimeout": "10m"
             },
             {
                 "type": "PowerShell",
@@ -99,10 +99,10 @@
         "runElevated": true,
         "scriptUri": "<template_dir>/scripts/Installers/Install-PowershellCore.ps1"
       },
-      {
-        "type": "windows-restart",
-        "restart_timeout": "10m"
-      },
+            {
+                "type": "WindowsRestart",
+                "restartTimeout": "10m"
+            },
       {
         "type": "PowerShell",
         "runElevated": true,
@@ -156,10 +156,10 @@
         "runElevated": true,
         "scriptUri": "<template_dir>/scripts/Installers/Install-ServiceFabricSDK.ps1"
       },
-      {
-        "type": "windows-restart",
-        "restart_timeout": "10m"
-      },
+            {
+                "type": "WindowsRestart",
+                "restartTimeout": "10m"
+            },
       {
         "type": "PowerShell",
         "runElevated": true,
@@ -469,10 +469,10 @@
         "runElevated": true,
         "scriptUri": "<template_dir>/scripts/Installers/Install-Bazel.ps1"
       },
-      {
-        "type": "windows-restart",
-        "restart_timeout": "10m"
-      },
+            {
+                "type": "WindowsRestart",
+                "restartTimeout": "10m"
+            },
       {
         "type": "PowerShell",
         "runElevated": true,
@@ -724,10 +724,10 @@
         "runElevated": true,
         "scriptUri": "<template_dir>/scripts/Installers/Finalize-VM.ps1"
       },
-      {
-        "type": "windows-restart",
-        "restart_timeout": "10m"
-      },
+            {
+                "type": "WindowsRestart",
+                "restartTimeout": "10m"
+            },
       {
         "type": "PowerShell",
         "runElevated": true,
