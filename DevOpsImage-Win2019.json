@@ -217,7 +217,7 @@
       },
       {
         "type": "File",
-        "name": "Step 34"
+        "name": "Step 34",
         "sourceUri": "<template_dir>/toolcache-2019.json",
         "destination": "<root_folder>/toolcache.json"
       },
