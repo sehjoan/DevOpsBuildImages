@@ -21,7 +21,7 @@
     },
     "customize": [
             {
-                "type": "PowerShelll",
+                "type": "PowerShell",
                 "name": "settingUpMgmtAgtPath",
                 "runElevated": false,
                 "inline": [
@@ -43,10 +43,20 @@
                 "name": "downloadBuildArtifacts",
                 "sourceUri": "https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/quickquickstarts/exampleArtifacts/buildArtifacts/index.html",
                 "destination": "c:\\buildArtifacts\\index.html"
-            },            
+            },
+            {
+                "type": "File",
+                "name": "CopyImageFolder",
+                "runElevated": true,
+                "sourceUri": "<template_dir>/scripts/ImageHelpers",
+                "destination": "C:\\Program Files\\WindowsPowerShell\\Modules\\"
+            },
             {
                 "type": "PowerShell",
                 "runElevated": true,
+                "environmentVars": [
+                    "ImageVersion=<image_version>"
+                ],
                 "scriptUri": "<template_dir>/scripts/Installers/Windows2019/Initialize-VM.ps1"
             },
             {
