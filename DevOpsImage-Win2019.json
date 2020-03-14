@@ -34,8 +34,8 @@
                 "name": "CreateImageFolder",
                 "runElevated": false,
                 "inline": [
-                    "mkdir <image_folder>",
-                    "echo <commit_id> > <commit_file>"
+                    "mkdir <root_drive>\\<image_folder>",
+                    "echo <commit_id> > <root_drive>\\<image_folder>\\<commit_file>"
                 ]
             },
             {
@@ -43,13 +43,13 @@
                 "name": "CopyImageFolder",
                 "runElevated": true,
                 "source": "<template_dir>/scripts/ImageHelpers",
-                "destination": "<helper_script_folder>"
+                "destination": "C:\\Program Files\\WindowsPowerShell\\Modules\\"
             },
             {
                 "type": "PowerShell",
                 "runElevated": true,
                 "environment_vars": [
-                    "ImageVersion={{user `image_version`}}"
+                    "ImageVersion=<image_version>"
                 ],
                 "scriptUri": "<template_dir>/scripts/Installers/Windows2019/Initialize-VM.ps1"
             },
