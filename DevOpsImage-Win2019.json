@@ -57,13 +57,6 @@
                 ]
             },
             {
-                "type": "File",
-                "name": "CopyImageFolder",
-                "runElevated": true,
-                "sourceUri": "<template_dir>/scripts/ImageHelpers",
-                "destination": "C:\\Program Files\\WindowsPowerShell\\Modules\\"
-            },
-            {
                 "type": "PowerShell",
                 "runElevated": true,
                 "scriptUri": "<template_dir>/scripts/Installers/Windows2019/Initialize-VM.ps1"
