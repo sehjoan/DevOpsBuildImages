@@ -57,9 +57,39 @@
                 ]
             },
             {
-                "type": "PowerShell",
+                "type": "File",
                 "runElevated": true,
-                "scriptUri": "https://raw.githubusercontent.com/sehjoan/DevOpsBuildImages/master/Scripts/Upload-ImageHelpers.ps1"
+                "name": "downloadBuildArtifacts",
+                "sourceUri": "<template_dir>scripts/ImageHelpers/ImageHelpers.psd1",
+                "destination":"C:\\Program Files\\WindowsPowerShell\\Modules\\ImageHelpers.psd1"
+            },
+            {
+                "type": "File",
+                "runElevated": true,
+                "name": "downloadBuildArtifacts",
+                "sourceUri": "<template_dir>scripts/ImageHelpers/ImageHelpers.psm1",
+                "destination":"C:\\Program Files\\WindowsPowerShell\\Modules\\ImageHelpers.psm1"
+            },
+            {
+                "type": "File",
+                "runElevated": true,
+                "name": "downloadBuildArtifacts",
+                "sourceUri": "<template_dir>scripts/ImageHelpers/InstallHelpers.ps1",
+                "destination":"C:\\Program Files\\WindowsPowerShell\\Modules\\InstallHelpers.ps1"
+            },
+            {
+                "type": "File",
+                "runElevated": true,
+                "name": "downloadBuildArtifacts",
+                "sourceUri": "<template_dir>scripts/ImageHelpers/MarkdownHelpers.ps1",
+                "destination":"C:\\Program Files\\WindowsPowerShell\\Modules\\MarkdownHelpers.ps1"
+            },
+            {
+                "type": "File",
+                "runElevated": true,
+                "name": "downloadBuildArtifacts",
+                "sourceUri": "<template_dir>scripts/ImageHelpers/PathHelpers.ps1",
+                "destination":"C:\\Program Files\\WindowsPowerShell\\Modules\\PathHelpers.ps1"
             },
             {
                 "type": "PowerShell",
