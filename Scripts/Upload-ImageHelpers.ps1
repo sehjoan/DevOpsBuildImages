@@ -1,0 +1,5 @@
+Invoke-WebRequest -uri "https://raw.githubusercontent.com/actions/virtual-environments/master/images/win/scripts/ImageHelpers/ImageHelpers.psd1" -OutFile "C:\\Program Files\\WindowsPowerShell\\Modules\\ImageHelpers.psd1"
+Invoke-WebRequest -uri "https://raw.githubusercontent.com/actions/virtual-environments/master/images/win/scripts/ImageHelpers/ImageHelpers.psm1" -OutFile "C:\\Program Files\\WindowsPowerShell\\Modules\\ImageHelpers.psm1"
+Invoke-WebRequest -uri "https://raw.githubusercontent.com/actions/virtual-environments/master/images/win/scripts/ImageHelpers/InstallHelpers.ps1" -OutFile "C:\\Program Files\\WindowsPowerShell\\Modules\\InstallHelpers.ps1"
+Invoke-WebRequest -uri "https://raw.githubusercontent.com/actions/virtual-environments/master/images/win/scripts/ImageHelpers/MarkdownHelpers.ps1" -OutFile "C:\\Program Files\\WindowsPowerShell\\Modules\\MarkdownHelpers.ps1"
+Invoke-WebRequest -uri "https://raw.githubusercontent.com/actions/virtual-environments/master/images/win/scripts/ImageHelpers/PathHelpers.ps1" -OutFile "C:\\Program Files\\WindowsPowerShell\\Modules\\PathHelpers.ps1"
