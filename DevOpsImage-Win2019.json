@@ -49,11 +49,11 @@
                     "setx IMAGEDATA_FILE <imagedata_file> /m",
                     "setx GITHUB_FEED_TOKEN <github_feed_token> /m",
                     "setx ROOT_FOLDER <root_folder> /m",
-                    "setx GO_VERSIONS=1.10.8,1.11.12,1.12.7,1.13 /m",
-                    "setx GO_DEFAULT=1.12.7 /m",
-                    "setx BOOST_VERSIONS=1.69.0,1.72.0 /m",
-                    "setx BOOST_DEFAULT=1.72.0 /m",
-                    "setx ROOT_FOLDER=<root_folder> /m"
+                    "setx GO_VERSIONS 1.10.8,1.11.12,1.12.7,1.13 /m",
+                    "setx GO_DEFAULT 1.12.7 /m",
+                    "setx BOOST_VERSIONS 1.69.0,1.72.0 /m",
+                    "setx BOOST_DEFAULT 1.72.0 /m",
+                    "setx ROOT_FOLDER <root_folder> /m"
                 ]
             },
             {
@@ -67,27 +67,6 @@
                 "type": "PowerShell",
                 "runElevated": true,
                 "scriptUri": "<template_dir>/scripts/Installers/Windows2019/Initialize-VM.ps1"
-            },
-            {
-                "type": "WindowsRestart",
-                "restartTimeout": "5m"
-            },
-            {
-                "type": "PowerShell",
-                "runElevated": true,
-                "scriptUri": "<template_dir>/scripts/Installers/Install-ContainersFeature.ps1"
-            },
-            {
-                "type": "WindowsRestart",
-                "restartTimeout": "10m"
-            },
-            {
-                "type": "PowerShell",
-                "runElevated": true,
-                "inline": [
-                    "setx ImageVersion <image_version> /m",
-                    "setx ImageOS <image_os>/m"
-                ]
             }
     ],
     "distribute": [
