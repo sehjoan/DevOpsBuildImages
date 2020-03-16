@@ -7,7 +7,7 @@
     "imagebuilderTemplate": "windows2019"
   },
   "properties": {
-    "buildTimeoutInMinutes": 100,
+    "buildTimeoutInMinutes": 300,
     "vmProfile": {
       "vmSize": "Standard_D1_v2",
       "osDiskSizeGB": 127
@@ -78,14 +78,6 @@
             {
                 "type": "WindowsRestart",
                 "restartTimeout": "10m"
-            },
-            {
-                "type": "PowerShell",
-                "runElevated": true,
-                "inline": [
-                    "setx ImageVersion <image_version> /m",
-                    "setx ImageOS <image_os>/m"
-                ]
             },
       {
         "type": "PowerShell",
