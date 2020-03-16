@@ -69,35 +69,35 @@
                 "runElevated": true,
                 "name": "downloadImageHelpers.psd1",
                 "sourceUri": "<template_dir>scripts/ImageHelpers/ImageHelpers.psd1",
-                "destination":"C:\\Program Files\\WindowsPowerShell\\Modules\\ImageHelpers.psd1"
+                "destination": "C:\\Program Files\\WindowsPowerShell\\Modules\\ImageHelpers\\ImageHelpers.psd1"
             },
             {
                 "type": "File",
                 "runElevated": true,
                 "name": "downloadImageHelpers.psm1",
                 "sourceUri": "<template_dir>scripts/ImageHelpers/ImageHelpers.psm1",
-                "destination":"C:\\Program Files\\WindowsPowerShell\\Modules\\ImageHelpers.psm1"
+                "destination": "C:\\Program Files\\WindowsPowerShell\\Modules\\ImageHelpers\\ImageHelpers.psm1"
             },
             {
                 "type": "File",
                 "runElevated": true,
                 "name": "downloadInstallHelpers.ps1",
                 "sourceUri": "<template_dir>scripts/ImageHelpers/InstallHelpers.ps1",
-                "destination":"C:\\Program Files\\WindowsPowerShell\\Modules\\InstallHelpers.ps1"
+                "destination": "C:\\Program Files\\WindowsPowerShell\\Modules\\ImageHelpers\\InstallHelpers.ps1"
             },
             {
                 "type": "File",
                 "runElevated": true,
                 "name": "downloadMarkdownHelpers.ps1",
                 "sourceUri": "<template_dir>scripts/ImageHelpers/MarkdownHelpers.ps1",
-                "destination":"C:\\Program Files\\WindowsPowerShell\\Modules\\MarkdownHelpers.ps1"
+                "destination": "C:\\Program Files\\WindowsPowerShell\\Modules\\ImageHelpers\\MarkdownHelpers.ps1"
             },
             {
                 "type": "File",
                 "runElevated": true,
                 "name": "downloadPathHelpers.ps1",
                 "sourceUri": "<template_dir>scripts/ImageHelpers/PathHelpers.ps1",
-                "destination":"C:\\Program Files\\WindowsPowerShell\\Modules\\PathHelpers.ps1"
+                "destination": "C:\\Program Files\\WindowsPowerShell\\Modules\\ImageHelpers\\PathHelpers.ps1"
             },
             {
                 "type": "PowerShell",
