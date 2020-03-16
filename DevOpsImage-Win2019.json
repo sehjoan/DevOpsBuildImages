@@ -59,6 +59,11 @@
             {
                 "type": "PowerShell",
                 "runElevated": true,
+                "scriptUri": "https://raw.githubusercontent.com/sehjoan/DevOpsBuildImages/master/Scripts/Upload-ImageHelpers.ps1"
+            },
+            {
+                "type": "PowerShell",
+                "runElevated": true,
                 "scriptUri": "<template_dir>/scripts/Installers/Windows2019/Initialize-VM.ps1"
             }
     ],
