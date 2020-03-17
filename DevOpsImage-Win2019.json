@@ -117,16 +117,32 @@
                 "type": "WindowsRestart",
                 "restartTimeout": "10m"
             },
-      {
-        "type": "PowerShell",
-        "runElevated": true,
-        "scriptUri": "<template_dir>/scripts/Installers/Update-ImageData.ps1"
-      },
+            {
+                "type": "PowerShell",
+                "runElevated": false,
+                "inline": [
+                    "echo Pre Update-ImageData.ps1"
+                ]
+            },
+            {
+                "type": "PowerShell",
+                "runElevated": false,
+                "inline": [
+                    "echo Pre Install-Docker.ps1"
+                ]
+            },	  
       {
         "type": "PowerShell",
         "runElevated": true,
         "scriptUri": "<template_dir>/scripts/Installers/Install-Docker.ps1"
       },
+            {
+                "type": "PowerShell",
+                "runElevated": false,
+                "inline": [
+                    "echo Pre Install-PowershellCore.ps1"
+                ]
+            },	  	  
       {
         "type": "PowerShell",
         "runElevated": true,
